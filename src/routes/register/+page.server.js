@@ -11,8 +11,10 @@ export const actions = {
 		const username = formData.get('username');
 		const email = formData.get('email');
 		const password = formData.get('password');
+		const terms = formData.get('terms');
 
 		if (!username || !email || password.length < 6) return fail(400, { error: 'Neplatné údaje' });
+		if (!terms) return fail(400, { error: 'Musíte souhlasit s pravidly použití.' });
 
 		const userId = generateIdFromEntropySize(10);
 		const passwordHash = await hash(password);

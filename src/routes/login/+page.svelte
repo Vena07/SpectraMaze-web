@@ -25,11 +25,13 @@
 </div>
 
 <style>
-	.auth-card { max-width: 400px; margin: 4rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-	h1 { display: flex; align-items: center; gap: 0.5rem; margin-top: 0; }
+	.auth-card { max-width: 400px; margin: 4rem auto; background: #1e293b; padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); border: 1px solid #334155; color: #f8fafc; }
+	h1 { display: flex; align-items: center; gap: 0.5rem; margin-top: 0; margin-bottom: 1.5rem; }
 	.form-group { margin-bottom: 1rem; }
-	label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
-	input { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; }
-	.btn { width: 100%; padding: 0.75rem; background: #3b82f6; color: white; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; margin-top: 1rem; }
-	.error { color: #dc2626; background: #fee2e2; padding: 0.75rem; border-radius: 4px; margin-bottom: 1rem; }
+	label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: #cbd5e1; }
+	input { width: 100%; padding: 0.75rem; border: 1px solid #475569; border-radius: 6px; background: #0f172a; color: white; outline: none; transition: border-color 0.2s; }
+	input:focus { border-color: #3b82f6; }
+	.btn { width: 100%; padding: 0.75rem; background: #3b82f6; color: white; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; margin-top: 1rem; font-weight: bold; transition: background 0.2s; }
+	.btn:hover { background: #2563eb; }
+	.error { color: #fca5a5; background: rgba(220,38,38,0.2); padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem; border: 1px solid #ef4444; }
 </style>

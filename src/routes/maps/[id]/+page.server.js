@@ -8,7 +8,8 @@ export const load = async ({ params, locals }) => {
 		id: maps.id,
 		title: maps.title,
 		createdAt: maps.createdAt,
-		author: users.username
+		author: users.username,
+		levelData: maps.levelData
 	}).from(maps).leftJoin(users, eq(maps.userId, users.id)).where(eq(maps.id, params.id));
 
 	if (!mapRes.length) throw error(404, 'Mapa nenalezena');

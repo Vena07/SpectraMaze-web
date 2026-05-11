@@ -1,16 +1,16 @@
 <script>
-	import { Gamepad2, LogIn, UserPlus, Settings, LayoutDashboard, LogOut } from 'lucide-svelte';
+	import { Gamepad2, LogIn, UserPlus, Settings, LayoutDashboard, LogOut, Map } from 'lucide-svelte';
 	let { user } = $props();
 </script>
 
 <header>
 	<div class="container">
 		<a href="/" class="logo">
-			<Gamepad2 size={28} />
-			<span>SpectraMaze</span>
+			<img src="/logo.png" alt="SpectraMaze Logo" class="header-logo" />
 		</a>
 
 		<nav>
+			<a href="/maps"><Map size={18} /> Mapy</a>
 			{#if user}
 				<a href="/dashboard"><LayoutDashboard size={18} /> Dashboard</a>
 				<a href="/settings"><Settings size={18} /> Nastavení</a>
@@ -40,7 +40,8 @@
 		justify-content: space-between;
 		align-items: center;
 	}
-	.logo { display: flex; align-items: center; gap: 0.5rem; color: #fff; text-decoration: none; font-size: 1.5rem; font-weight: bold; }
+	.logo { display: flex; align-items: center; text-decoration: none; }
+	.header-logo { height: 36px; width: auto; object-fit: contain; }
 	nav { display: flex; align-items: center; gap: 1.5rem; }
 	nav a { color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
 	nav a:hover { color: #fff; }
