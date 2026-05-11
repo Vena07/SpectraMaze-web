@@ -29,3 +29,9 @@ export const ratings = sqliteTable('ratings', {
 	userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
 	stars: integer('stars').notNull()
 });
+
+export const leaderboards = sqliteTable('leaderboards', {
+	id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
+	userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+	score: integer('score').notNull().default(0)
+});
